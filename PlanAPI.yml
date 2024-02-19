@@ -1,0 +1,24 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 9092
+spring:
+  application:
+    name: PlanAPI
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  config:
+    import: optional:configserver:http://localhost:9095
+  datasource:
+    password: PAVANKUMAR
+    url: jdbc:mysql://localhost:3306/sbms
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
