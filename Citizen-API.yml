@@ -1,0 +1,22 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 9093
+spring:
+  application:
+    name: Citizen-API
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  datasource:
+    password: PAVANKUMAR
+    url: jdbc:mysql://localhost:3306/sbms
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
